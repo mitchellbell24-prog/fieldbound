@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --charcoal: #141210;
+  --ink: #2a2622;
+  --parchment: #f3efe6;
+  --sand: #e7dfd0;
+  --moss: #5f7a4c;
+  --moss-deep: #456037;
+  --amber: #d4a017;
+  --muted: #6e675c;
+  --line: rgba(20, 18, 16, 0.1);
+}
+
+@theme inline {
+  --color-charcoal: var(--charcoal);
+  --color-ink: var(--ink);
+  --color-parchment: var(--parchment);
+  --color-sand: var(--sand);
+  --color-moss: var(--moss);
+  --color-moss-deep: var(--moss-deep);
+  --color-amber: var(--amber);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--parchment);
+  color: var(--charcoal);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 3px;
+}
+
+.stripe {
+  background: repeating-linear-gradient(
+    -12deg,
+    transparent,
+    transparent 12px,
+    rgba(95, 122, 76, 0.05) 12px,
+    rgba(95, 122, 76, 0.05) 13px
+  );
+}
